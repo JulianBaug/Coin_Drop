@@ -28,6 +28,6 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         timeCurrent += Time.deltaTime * speed;
-        textUI.text = label + " " + timeCurrent.ToString("N0");
+        textUI.text = label + " " + timeCurrent.ToString("N2");
     }
 }
