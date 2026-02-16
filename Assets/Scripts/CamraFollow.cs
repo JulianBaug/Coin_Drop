@@ -9,6 +9,7 @@ public class CamraFollow : MonoBehaviour
     public float offset;
     public Transform target;
     public Rigidbody2D rb;
+    Vector2 startPosCoin;
     Transform cameraMain;
     Vector3 startPos;
 
@@ -16,12 +17,13 @@ public class CamraFollow : MonoBehaviour
     {
         cameraMain = GetComponent<Transform>();
         startPos = cameraMain.position;
+        startPosCoin = target.position;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(target.position.y == 4.09f)
+        if(target.position.y == startPosCoin.y)
         {
             cameraMain.position = startPos;
         }

@@ -26,7 +26,7 @@ public class Reset : MonoBehaviour
     void Update()
     {
         
-        if(transform.position.y < resetHeight || Input.GetButtonDown("Fire1"))
+        if(transform.position.y <= resetHeight || Input.GetButtonDown("Fire1"))
         {
             transform.position = startPos;
             transform.rotation = startRotation;
